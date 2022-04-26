@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* padding and margin are part of the element
+    total width and height */
+    box-sizing: border-box;
+}
+
+html {
+    /* Montserrat is already installed on PC */
+    font-family: "Montserrat", sans-serif;
+}
+
+section {
+    /* a shade of black */
+    background: rgb(18, 26, 31);
+    /* 100% vertical height of device screen */
+    min-height: 100vh;
+    /* 100% of available width */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    /* 90% of total available width */
+    width: 90%;
+    /* on larger screens the width should not
+    exceed 400px */
+    max-width: 400px;
+    background: rgb(39, 55, 59);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.display {
+    background: rgb(182, 182, 182);
+    height: 100px;
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+    font-size: 30px;
+    position: relative;
+}
+
+
+/* history display */
+
+.display-1 {
+    opacity: .4;
+    font-size: 20px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.temp-result {
+    position: absolute;
+    bottom: 0;
+    left: 10;
+    font-size: 20px;
+    opacity: 0.4;
+}
+
+.all_buttons {
+    color: whitesmoke;
+    display: grid;
+    /* four columns and four rows */
+    grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+}
+
+.button {
+    border: .5px solid rgba(92, 92, 92, 0.137);
+    display: inline-block;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: rgb(30, 43, 46);
+}
+
+.btn-0 {
+    /* we want button zero to occupy
+    three columns */
+    grid-column: 1 / 3;
+}
